@@ -1,4 +1,6 @@
-package dialga.shiny.api.teams;
+package dialga.shiny.api.api.teams;
+
+import dialga.shiny.api.utils.TeamUtils;
 
 import java.util.List;
 

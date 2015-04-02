@@ -1,6 +1,7 @@
-package dialga.shiny.api.players;
+package dialga.shiny.api.api.players;
 
-import dialga.shiny.api.teams.Team;
+import dialga.shiny.api.api.teams.Team;
+import dialga.shiny.api.utils.PlayerUtils;
 
 import java.util.UUID;
 

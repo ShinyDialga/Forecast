@@ -1,6 +1,7 @@
-package dialga.shiny.api.players;
+package dialga.shiny.api.utils;
 
-import dialga.shiny.api.teams.Team;
+import dialga.shiny.api.api.players.Player;
+import dialga.shiny.api.api.teams.Team;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -32,11 +33,11 @@ public class PlayerUtils {
             int isTeam = 0;
             while ((inputLine = in.readLine()) != null) {
                 i++;
-                if (inputLine.equals("<h6>team</h6>")) {
-                    isTeam = isTeam + 2;
+                if (inputLine.equalsIgnoreCase("<h6>Team</h6>")) {
+                    isTeam = i + 2;
                 }
                 if (i == isTeam) {
-                    new Team(inputLine.replaceAll("\\<[^>]*>",""));
+                    return new Team(inputLine.replaceAll("\\<[^>]*>",""));
                 }
             }
         } catch (Exception e) {
